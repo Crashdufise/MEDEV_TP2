@@ -1,5 +1,5 @@
 #include <iostream>
 #include <string>
-#include "Lecture_Ecriture.h"
+#pragma once
 
 using namespace std;
