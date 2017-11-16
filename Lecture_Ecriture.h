@@ -16,5 +16,5 @@ public:
     void lecture(string nomFichier);
     void ecriture(string nomFichier);
     vector<vector<int>> getContenu();
-    void setValeurXY(int x, int y, int _valeur)
+    void setValeurXY(int x, int y, int _valeur);
 };
