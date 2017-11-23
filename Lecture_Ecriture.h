@@ -3,6 +3,8 @@
 #include <fstream>
 #pragma once
 
+#include <vector>
+
 using namespace std;
 class image {
 private:
