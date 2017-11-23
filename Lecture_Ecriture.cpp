@@ -47,7 +47,7 @@ vector<vector<int>> getContenu() {
 }
 
 void image::setValeurXY(int x, int y, int _valeur) {
-    contenu[y][2*x]=_valeur;
+    contenu[y][x]=_valeur;
 }
 
 void image::histogramme() {
