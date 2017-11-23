@@ -41,6 +41,8 @@ void difference(string filepath1, string filepath2) {
 			tabPGM[i][j].push_back(tabPGM1[i][j]-tabPGM2[i][j]));
 		}
 	}
+	image resultat = image(imagePGM.getNom(), "Différence entre les images suivantes : \n " + imagePGM1.getNom() + "\n" + imagePGM2.getNom(), hauteur, largeur, tabPGM);
+	resultat.ecriture();
 }
 
 
@@ -48,16 +50,17 @@ void aggrandir(string filepath) {
 
 	image imagePGM = image(filepath);
 	int hauteur = 2*imagePGM.getHauteur();
-	int largeur = 2*imagePGM.getLargeur();
-	vector<vector<int>> tabPGM = imagePGM.getContenu();
+	int largeur = 2 * imagePGM.getLargeur();
+	std::vector<std::vector<int>> tabAggrandiPGM = imagePGM.getContenu();
+
+	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), imagePGM.getHauteur(), imagePGM.getLargeur(), tabAggrandiPGM);
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
-			if (tabPGM[i][j] < ) {
-				imagePGM.setValeurXY(i, j, 0);
-			}
-			else {
-				imagePGM.setValeurXY(i, j, 255);
-			}
+			imagePGM.setValeurXY(i, j, tabAggrandiPGM[i/2][j/2]);
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f35e2ed6941219fce80433bf55e21d543036f467
