@@ -6,7 +6,7 @@
 
 int main()
 {
-	std::cout << "Hellow World bâtard mdr";
+	std::cout << "Hollow World";
 
 	int stop = 0;
 	std::cin >> stop;
