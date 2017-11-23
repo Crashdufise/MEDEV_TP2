@@ -24,7 +24,7 @@ public:
 	string getNom() { return nomImage; }
 	string getCommentaire() { return commentaire; }
     void setValeurXY(int x, int y, int _valeur);
-	void histogramme();
+	image histogramme();
 	image(string nomFichier);
 	image(string nomImage, string commentaire, int hauteur, int largeur, vector<vector<int>> contenu);
 };
