@@ -6,9 +6,6 @@
 #include "Lecture_Ecriture.h"
 using namespace std;
 
-int min(int & a, int & b) {
-	return (a < b) ? a : b;
-}
 
 void seuillage(string filepath, int seuil) {
 
@@ -47,23 +44,3 @@ void difference(string filepath1, string filepath2) {
 	image resultat = image(imagePGM.getNom(), "Différence entre les images suivantes : \n " + imagePGM1.getNom() + "\n" + imagePGM2.getNom(), hauteur, largeur, tabPGM);
 	resultat.ecriture();
 }
-
-
-void aggrandir(string filepath) {
-
-	image imagePGM = image(filepath);
-	int hauteur = 2*imagePGM.getHauteur();
-	int largeur = 2 * imagePGM.getLargeur();
-	std::vector<std::vector<int>> tabAggrandiPGM = imagePGM.getContenu();
-
-	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), imagePGM.getHauteur(), imagePGM.getLargeur(), tabAggrandiPGM);
-	for (int i = 0; i < hauteur; i++) {
-		for (int j = 0; j < largeur; j++) {
-			imagePGM.setValeurXY(i, j, tabAggrandiPGM[i/2][j/2]);
-		}
-	}
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> f35e2ed6941219fce80433bf55e21d543036f467
