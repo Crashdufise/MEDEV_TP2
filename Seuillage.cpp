@@ -52,12 +52,12 @@ void aggrandir(string filepath) {
 	image imagePGM = image(filepath);
 	int hauteur = 2*imagePGM.getHauteur();
 	int largeur = 2 * imagePGM.getLargeur();
-	std::vector<std::vector<int>> tabPGM = imagePGM.getContenu();
+	std::vector<std::vector<int>> tabAggrandiPGM = imagePGM.getContenu();
 
-	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), imagePGM.getHauteur(), imagePGM.getLargeur(), tabPGM);
+	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), imagePGM.getHauteur(), imagePGM.getLargeur(), tabAggrandiPGM);
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
-			imageAggrandie.setValeurXY(i, j, tabAggrandiPGM[i/2][j/2]);
+			imagePGM.setValeurXY(i, j, tabAggrandiPGM[i/2][j/2]);
 		}
 	}
 }
@@ -66,5 +66,11 @@ void reduction(string filepath) {
 	image imagePGM = image(filepath);
 	int hauteur = imagePGM.getHauteur()/2;
 	int largeur = imagePGM.getLargeur()/2;
+	std::std::vector<std::std::vector<int> > tabRetreciePGM = imagePGM.getContenu();
+	for (int i = 0; i < hauteur; i++) {
+		for (int j = 0; j < largeur; j++) {
+			imagePGM.
+		}
+	}
 
 }
