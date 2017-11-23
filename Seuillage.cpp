@@ -18,10 +18,10 @@ image seuillage(string filepath, int seuil) {
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
 			if (tabPGM[i][j] < seuil) {
-				tabPGM[i][j] = 0;
+				imagePGM.getTabPGM[i][j] = 0;
 			}
 			else {
-				tabPGM[i][j] = 255;
+				imagePGM.getTabPGM[i][j] = 255;
 			}
 		}
 	}
