@@ -23,7 +23,6 @@ public:
 	int getLargeur();
 	string getNom();
     void setValeurXY(int x, int y, int _valeur);
-    string getNom();
 	void histogramme();
 	image(string nomFichier);
 	image(string nomImage, string commentaire, int hauteur, int largeur, vector<vector<int>> contenu);
