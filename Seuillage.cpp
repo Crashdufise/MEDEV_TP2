@@ -68,7 +68,7 @@ void reduction(string filepath) {
 	image imagePGM = image(filepath);
 	int hauteur = imagePGM.getHauteur()/2;
 	int largeur = imagePGM.getLargeur()/2;
-	std::std::vector<std::std::vector<int> > tabRetreciePGM = imagePGM.getContenu();
+	std::vector<std::vector<int> > tabRetreciePGM = imagePGM.getContenu();
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
 			imagePGM.
