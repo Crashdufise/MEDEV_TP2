@@ -2,9 +2,17 @@
 #include <string>
 #include <fstream>
 #include "Lecture_Ecriture.h"
+using namespace std;
 
 void image::ecriture(string nomFichier) {
-
+    ofstream outfile (nomFichier);
+    outfile << "P2" << endl << commentaire << endl << hauteur +" "+ largeur << endl;
+    for(int i = 0; i < hauteur; i++) {
+        for(int j = 0; j< largeur; j++) {
+            outfile << contenu[i][j] + " ";
+        }
+        outfile << endl;
+    }
 }
 
 image::image(string nomFichier) {
@@ -53,5 +61,4 @@ void image::histogramme() {
 	int hauteurHist = 100;
 	int largeurHist = 255;
 	vector<vector<int>> contenuHistogramme;
-
 }
