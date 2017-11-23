@@ -43,7 +43,7 @@ image::image(string nomFichier) {
 }
 
 vector<vector<int>> getContenu() {
-
+    return contenu;
 }
 
 void image::setValeurXY(int x, int y, int _valeur) {
