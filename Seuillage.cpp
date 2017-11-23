@@ -54,7 +54,7 @@ void aggrandir(string filepath) {
 	vector<vector<int>> tabPGM = imagePGM.getContenu();
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
-			if (tabPGM[i][j] < seuil) {
+			if (tabPGM[i][j] < ) {
 				imagePGM.setValeurXY(i, j, 0);
 			}
 			else {
@@ -62,4 +62,8 @@ void aggrandir(string filepath) {
 			}
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f35e2ed6941219fce80433bf55e21d543036f467

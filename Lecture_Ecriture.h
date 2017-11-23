@@ -19,6 +19,9 @@ private:
 public:
     void ecriture();
     vector<vector<int>> getContenu();
+	int getHauteur();
+	int getLargeur();
+	string getNom();
     void setValeurXY(int x, int y, int _valeur);
     string getNom();
 	void histogramme();

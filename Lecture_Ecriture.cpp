@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 #include "Lecture_Ecriture.h"
 
 void image::ecriture(string nomFichier) {
@@ -53,5 +54,11 @@ void image::histogramme() {
 	int hauteurHist = 100;
 	int largeurHist = 255;
 	vector<vector<int>> contenuHistogramme;
-
+	for (int i=0; i<hauteurHist, i++) {
+		vector<int> ligne;
+		for (int j=0; j<largeurHist, j++) {
+			ligne.push_back(0);
+		}
+		contenuHistogramme.push_back(ligne);
+	}
 }
