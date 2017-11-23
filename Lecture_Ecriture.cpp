@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 #include "Lecture_Ecriture.h"
 using namespace std;
 
@@ -61,4 +62,14 @@ void image::histogramme() {
 	int hauteurHist = 100;
 	int largeurHist = 255;
 	vector<vector<int>> contenuHistogramme;
+<<<<<<< HEAD
+=======
+	for (int i=0; i<hauteurHist, i++) {
+		vector<int> ligne;
+		for (int j=0; j<largeurHist, j++) {
+			ligne.push_back(0);
+		}
+		contenuHistogramme.push_back(ligne);
+	}
+>>>>>>> f35e2ed6941219fce80433bf55e21d543036f467
 }
