@@ -61,3 +61,10 @@ void aggrandir(string filepath) {
 		}
 	}
 }
+
+void reduction(string filepath) {
+	image imagePGM = image(filepath);
+	int hauteur = imagePGM.getHauteur()/2;
+	int largeur = imagePGM.getLargeur()/2;
+
+}
