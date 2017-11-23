@@ -1,12 +1,12 @@
 #include <iostream>
+using namespace std;
 #include <string>
 #include <fstream>
 #include <vector>
 #include "Lecture_Ecriture.h"
-using namespace std;
 
-void image::ecriture(string nomFichier) {
-    ofstream outfile (nomFichier);
+void image::ecriture() {
+    ofstream outfile (nomImage);
     outfile << "P2" << endl << commentaire << endl << hauteur +" "+ largeur << endl;
     for(int i = 0; i < hauteur; i++) {
         for(int j = 0; j< largeur; j++) {
@@ -34,9 +34,9 @@ image::image(string nomFichier) {
         // on a rentré le commentaire normalement
 
         getline(fichier, ligne, ' ');
-        hauteur = ligne;
+        hauteur = stoi (ligne);
         getline(fichier, ligne);
-        largeur = ligne;
+        largeur = stoi (ligne);
 
         for(int i = 0; i < hauteur; i++) {
             getline(fichier, ligne);
