@@ -13,10 +13,12 @@ private:
     int hauteur;
     int largeur;
     vector<vector<int>> contenu;// creer tableau de valeurs ici
+
 public:
-    image(string nomFichier);
     void ecriture();
     vector<vector<int>> getContenu();
     void setValeurXY(int x, int y, int _valeur);
 	void histogramme();
+	image(string nomFichier);
+	image(string nomImage, string commentaire, int hauteur, int largeur, vector<vector<int>> contenu);
 };
