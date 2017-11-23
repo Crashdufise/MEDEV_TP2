@@ -1,4 +1,4 @@
-// TP2MEDEV.cpp : Définit le point d'entrée pour l'application console.
+// TP2MEDEV.cpp : DÃ©finit le point d'entrÃ©e pour l'application console.
 //
 
 #include <iostream>
