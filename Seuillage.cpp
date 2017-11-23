@@ -43,17 +43,16 @@ void difference(string filepath1, string filepath2) {
 	}
 }
 
-<<<<<<< HEAD
 
 void aggrandir(string filepath) {
 
 	image imagePGM = image(filepath);
 	int hauteur = 2*imagePGM.getHauteur();
-	int largeur = 2*imagePGM.getLargeur();
-	vector<vector<int>> tabPGM = imagePGM.getContenu();
+	int largeur = 2 * imagePGM.getLargeur();
+	image imageAggrandie = image(imagePGM.getNom()+" x2", commentaire, int hauteur, int largeur, vector<vector<int>> contenu);
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
-			if (tabPGM[i][j] < seuil) {
+			if (tabPGM[i][j] < ) {
 				imagePGM.setValeurXY(i, j, 0);
 			}
 			else {
@@ -62,8 +61,3 @@ void aggrandir(string filepath) {
 		}
 	}
 }
-=======
-void aggrandissement(string filepath) {
-	image imagePGM = image(filepath);
-}
->>>>>>> f98c417d0cfdc407bf74896daadb6c318562fad9
