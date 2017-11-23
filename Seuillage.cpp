@@ -52,12 +52,12 @@ void aggrandir(string filepath) {
 	image imagePGM = image(filepath);
 	int hauteur = 2*imagePGM.getHauteur();
 	int largeur = 2 * imagePGM.getLargeur();
-	std::vector<std::vector<int>> tabAggrandiPGM = imagePGM.getContenu();
+	std::vector<std::vector<int>> tabPGM = imagePGM.getContenu();
 
-	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), imagePGM.getHauteur(), imagePGM.getLargeur(), tabAggrandiPGM);
+	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), imagePGM.getHauteur(), imagePGM.getLargeur(), tabPGM);
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
-			imagePGM.setValeurXY(i, j, tabAggrandiPGM[i/2][j/2]);
+			imageAggrandie.setValeurXY(i, j, tabAggrandiPGM[i/2][j/2]);
 		}
 	}
 }
