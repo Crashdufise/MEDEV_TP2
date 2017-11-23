@@ -57,7 +57,7 @@ void aggrandir(string filepath) {
 	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), imagePGM.getHauteur(), imagePGM.getLargeur(), tabPGM);
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
-			imageAggrandie.setValeurXY(i, j, tabAggrandiPGM[i/2][j/2]);
+			imageAggrandie.setValeurXY(i, j, tabPGM[i/2][j/2]);
 		}
 	}
 }
