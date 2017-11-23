@@ -16,17 +16,10 @@ image seuillage(string filepath, int seuil) {
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
 			if (tabPGM[i][j] < seuil) {
-<<<<<<< HEAD
-				imagePGM.getTabPGM[i][j] = 0;
-			}
-			else {
-				imagePGM.getTabPGM[i][j] = 255;
-=======
 				imagePGM.setValeurXY(i,j,0);
 			}
 			else {
 				imagePGM.setValeurXY(i,j,255);
->>>>>>> d3af76abf6724134ef6e2d4e575fd02ef38f513e
 			}
 		}
 	}
