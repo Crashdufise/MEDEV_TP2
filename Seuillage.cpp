@@ -6,6 +6,9 @@
 #include "Lecture_Ecriture.h"
 using namespace std;
 
+int min(int a, int b) {
+	return (a < b) ? a : b;
+}
 
 void seuillage(string filepath, int seuil) {
 
@@ -24,7 +27,7 @@ void seuillage(string filepath, int seuil) {
 		}
 	}
 	// Faudrait un accesseur pour le nom de l'image plz
-	image resultat = image(imagePGM.getNom(), "Image" + imagePGM.getNom() + "seuillée", hauteur, largeur, tabPGM);
+	image resultat = image(imagePGM.getNom() + "seuillée", "Image" + imagePGM.getNom() + "seuillée", hauteur, largeur, tabPGM);
 	resultat.ecriture();
 }
 
@@ -41,7 +44,7 @@ void difference(string filepath1, string filepath2) {
 			tabPGM[i][j].push_back(tabPGM1[i][j]-tabPGM2[i][j]));
 		}
 	}
-	image resultat = image(imagePGM.getNom(), "Différence entre les images suivantes : \n " + imagePGM1.getNom() + "\n" + imagePGM2.getNom(), hauteur, largeur, tabPGM);
+	image resultat = image("Difference", "Différence entre les images suivantes : " + imagePGM1.getNom() + "\t" + imagePGM2.getNom(), hauteur, largeur, tabPGM);
 	resultat.ecriture();
 }
 
@@ -51,16 +54,34 @@ void aggrandir(string filepath) {
 	image imagePGM = image(filepath);
 	int hauteur = 2*imagePGM.getHauteur();
 	int largeur = 2 * imagePGM.getLargeur();
-	std::vector<std::vector<int>> tabAggrandiPGM = imagePGM.getContenu();
+	std::vector<std::vector<int>> tabPGM = imagePGM.getContenu();
+	std::vector<std::vector<int>> newtab;
+	newtab.resize(hauteur);
 
-	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), imagePGM.getHauteur(), imagePGM.getLargeur(), tabAggrandiPGM);
+
+	image imageAggrandie = image(imagePGM.getNom()+" x2", "Image Aggrandie :"+imagePGM.getCommentaire(), hauteur, largeur, newtab);
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
-			imagePGM.setValeurXY(i, j, tabAggrandiPGM[i/2][j/2]);
+			imageAggrandie.contenuPushBack(i, tabPGM[i/2][j/2]);
 		}
 	}
+	imageAggrandie.ecriture();
+}
+
+void reduction(string filepath) {
+	image imagePGM = image(filepath);
+	int hauteur = imagePGM.getHauteur()/2;
+	int largeur = imagePGM.getLargeur()/2;
 <<<<<<< HEAD
-}
+	std::vector<std::vector<int> > tabPGM = imagePGM.getContenu();
+	image imageRetrecie = image(imagePGM.getNom()+" /2", "Image Retrecie :"+imagePGM.getCommentaire(), hauteur, largeur, tabPGM);
 =======
+	std::vector<std::vector<int> > tabRetreciePGM = imagePGM.getContenu();
+>>>>>>> 80e71de594811981536be9a86f0c0c878abb45bb
+	for (int i = 0; i < hauteur; i++) {
+		for (int j = 0; j < largeur; j++) {
+			imageRetrecie.setValeurXY(i, j, tabPGM[i*2][j*2]);
+		}
+	}
+	imageRetrecie.ecriture();
 }
->>>>>>> f35e2ed6941219fce80433bf55e21d543036f467
