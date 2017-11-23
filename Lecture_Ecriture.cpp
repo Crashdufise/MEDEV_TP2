@@ -16,9 +16,6 @@ image::image(string nomFichier) {
 
         nomImage = nomFichier;
 
-        //compter les lignes
-        int nb_lignes = 0;
-
         getline(fichier, ligne);
         entete = ligne;
         // on a rentré le "P2" normalement
