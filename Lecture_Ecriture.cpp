@@ -14,6 +14,8 @@ image::image(string nomFichier) {
 
         string ligne;
 
+        nomImage = nomFichier;
+
         //compter les lignes
         int nb_lignes = 0;
         while(!fichier.eof()){
@@ -31,9 +33,16 @@ image::image(string nomFichier) {
         commentaire = ligne;
         // on a rentré le commentaire normalement
 
-        for(int i = 2; i < nb_lignes; i++) {
+        hauteur = nb_lignes - 2;
+        largeur = (strlen(ligne) + 1)/2;
+
+        for(int i = 2; i < hauteur + 2; i++) {
             getline(fichier, ligne);
+            for(int j = 0; j < largeur; j++) {
+                contenu[i][j] = ligne[j*2];
+            }
         }
+        // euh... ça marche ça ?
     }
 }
 
@@ -43,4 +52,8 @@ vector<vector<int>> getContenu() {
 
 void image::setValeurXY(int x, int y, int _valeur) {
     contenu[y][2*x]=_valeur;
+}
+
+void image::histogramme() {
+
 }
