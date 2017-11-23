@@ -44,6 +44,8 @@ void difference(string filepath1, string filepath2) {
 			tabPGM[i][j].push_back(tabPGM1[i][j]-tabPGM2[i][j]));
 		}
 	}
+	image resultat = image(imagePGM.getNom(), "Différence entre les images suivantes : \n" + imagePGM1.getNom() + "\n" + imagePGM2.getNom(), hauteur, largeur, tabPGM);
+	resultat.ecriture();
 }
 
 
