@@ -43,7 +43,7 @@ image::image(string nomFichier) {
 }
 
 vector<vector<int>> getContenu() {
-
+    return contenu;
 }
 
 void image::setValeurXY(int x, int y, int _valeur) {
@@ -51,5 +51,10 @@ void image::setValeurXY(int x, int y, int _valeur) {
 }
 
 void image::histogramme() {
+	string nomImageHist = "Histogramme " + this.nomImage;
+	string commentaireHist = "Histogramme de l'image " + this.nomImage;
+	int hauteurHist = 100;
+	int largeurHist = 255;
+	vector<vector<int>> contenuHistogramme;
 
 }
