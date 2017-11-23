@@ -48,8 +48,8 @@ void aggrandir(string filepath) {
 
 	image imagePGM = image(filepath);
 	int hauteur = 2*imagePGM.getHauteur();
-	int largeur = 2*imagePGM.getLargeur();
-	vector<vector<int>> tabPGM = imagePGM.getContenu();
+	int largeur = 2 * imagePGM.getLargeur();
+	image imageAggrandie = image(imagePGM.getNom()+" x2", commentaire, int hauteur, int largeur, vector<vector<int>> contenu);
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
 			if (tabPGM[i][j] < ) {

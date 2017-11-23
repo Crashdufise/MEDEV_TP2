@@ -19,9 +19,10 @@ private:
 public:
     void ecriture();
     vector<vector<int>> getContenu();
-	int getHauteur();
-	int getLargeur();
-	string getNom();
+	int getHauteur() { return hauteur; }
+	int getLargeur() { return largeur; }
+	string getNom() { return nomImage; }
+	string getCommentaire() { return commentaire; }
     void setValeurXY(int x, int y, int _valeur);
 	void histogramme();
 	image(string nomFichier);
