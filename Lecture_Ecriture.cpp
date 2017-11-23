@@ -3,9 +3,17 @@
 #include <fstream>
 #include <vector>
 #include "Lecture_Ecriture.h"
+using namespace std;
 
 void image::ecriture(string nomFichier) {
-
+    ofstream outfile (nomFichier);
+    outfile << "P2" << endl << commentaire << endl << hauteur +" "+ largeur << endl;
+    for(int i = 0; i < hauteur; i++) {
+        for(int j = 0; j< largeur; j++) {
+            outfile << contenu[i][j] + " ";
+        }
+        outfile << endl;
+    }
 }
 
 image::image(string nomFichier) {
