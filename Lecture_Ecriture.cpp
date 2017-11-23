@@ -18,12 +18,6 @@ image::image(string nomFichier) {
 
         //compter les lignes
         int nb_lignes = 0;
-        while(!fichier.eof()){
-            getline(fichier,ligne);
-            nb_lignes++;
-            fichier.close();
-        }
-        ifstream fichier(nomFichier, ios::in);
 
         getline(fichier, ligne);
         entete = ligne;
@@ -33,10 +27,12 @@ image::image(string nomFichier) {
         commentaire = ligne;
         // on a rentré le commentaire normalement
 
-        hauteur = nb_lignes - 2;
-        largeur = (strlen(ligne) + 1)/2;
+        getline(fichier, ligne, ' ');
+        hauteur = ligne;
+        getline(fichier, ligne);
+        largeur = ligne;
 
-        for(int i = 2; i < hauteur + 2; i++) {
+        for(int i = 0; i < hauteur; i++) {
             getline(fichier, ligne);
             for(int j = 0; j < largeur; j++) {
                 contenu[i][j] = ligne[j*2];
@@ -47,11 +43,11 @@ image::image(string nomFichier) {
 }
 
 vector<vector<int>> getContenu() {
-
+    return contenu;
 }
 
 void image::setValeurXY(int x, int y, int _valeur) {
-    contenu[y][2*x]=_valeur;
+    contenu[y][x]=_valeur;
 }
 
 void image::histogramme() {
