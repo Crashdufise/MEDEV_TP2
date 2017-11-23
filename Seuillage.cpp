@@ -6,6 +6,9 @@
 #include "Lecture_Ecriture.h"
 using namespace std;
 
+int min(int & a, int & b) {
+	return (a < b) ? a : b;
+}
 
 void seuillage(string filepath, int seuil) {
 
