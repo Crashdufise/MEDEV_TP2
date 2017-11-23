@@ -23,6 +23,7 @@ public:
 	int getLargeur() { return largeur; }
 	string getNom() { return nomImage; }
 	string getCommentaire() { return commentaire; }
+	void contenuPushBack(int i, int ajout) { contenu[i].push_back(ajout);	 }
     void setValeurXY(int x, int y, int _valeur);
 	image histogramme();
 	image(string nomFichier);
