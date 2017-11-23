@@ -6,6 +6,7 @@
 using namespace std;
 class image {
 private:
+	string nomImage;
     string entete = "P2";
     string commentaire;
     int maxVal = 255;
@@ -14,7 +15,8 @@ private:
     vector<vector<int>> contenu;// creer tableau de valeurs ici
 public:
     image(string nomFichier);
-    void ecriture(string nomFichier);
+    void ecriture();
     vector<vector<int>> getContenu();
     void setValeurXY(int x, int y, int _valeur);
+	void histogramme();
 };
