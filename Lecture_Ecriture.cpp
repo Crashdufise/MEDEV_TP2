@@ -48,17 +48,20 @@ void image::setValeurXY(int x, int y, int _valeur) {
     contenu[y][x]=_valeur;
 }
 
-void image::histogramme() {
+image image::histogramme() {
 	string nomImageHist = "Histogramme " + this.nomImage;
 	string commentaireHist = "Histogramme de l'image " + this.nomImage;
 	int hauteurHist = 100;
-	int largeurHist = 255;
+	int largeurHist = 256;
 	vector<vector<int>> contenuHistogramme;
 	for (int i=0; i<hauteurHist, i++) {
 		vector<int> ligne;
 		for (int j=0; j<largeurHist, j++) {
-			ligne.push_back(0);
+			ligne.push_back(255);
 		}
 		contenuHistogramme.push_back(ligne);
+	}
+	for (int k=0, k<largeurHist, k++) {
+		int e;
 	}
 }
