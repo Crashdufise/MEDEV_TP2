@@ -48,7 +48,7 @@ image::image(string nomFichier) {
     }
 }
 
-vector<vector<int>> getContenu() {
+vector<vector<int>> image::getContenu() {
     return contenu;
 }
 
