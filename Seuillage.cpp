@@ -41,7 +41,7 @@ void difference(string filepath1, string filepath2) {
 	std::vector<std::vector<int>> tabPGM2 = imagePGM2.getContenu();
 	for (int i = 0; i< hauteur ; i++) {
 		for (int j = 0 ; j< largeur ; j++) {
-			tabPGM[i][j].push_back(tabPGM1[i][j]-tabPGM2[i][j]));
+			tabPGM[i].push_back(tabPGM1[i][j]-tabPGM2[i][j]));
 		}
 	}
 	image resultat = image("Difference", "Différence entre les images suivantes : " + imagePGM1.getNom() + "\t" + imagePGM2.getNom(), hauteur, largeur, tabPGM);
@@ -69,12 +69,8 @@ void reduction(string filepath) {
 	image imagePGM = image(filepath);
 	int hauteur = imagePGM.getHauteur()/2;
 	int largeur = imagePGM.getLargeur()/2;
-<<<<<<< HEAD
 	std::vector<std::vector<int> > tabPGM = imagePGM.getContenu();
 	image imageRetrecie = image(imagePGM.getNom()+" /2", "Image Retrecie :"+imagePGM.getCommentaire(), hauteur, largeur, tabPGM);
-=======
-	std::vector<std::vector<int> > tabRetreciePGM = imagePGM.getContenu();
->>>>>>> 80e71de594811981536be9a86f0c0c878abb45bb
 	for (int i = 0; i < hauteur; i++) {
 		for (int j = 0; j < largeur; j++) {
 			imageRetrecie.setValeurXY(i, j, tabPGM[i*2][j*2]);
