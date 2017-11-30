@@ -9,9 +9,9 @@ using namespace std;
 class image {
 private:
 	string nomImage;
-    string entete = "P2";
+    string entete;
     string commentaire;
-    int maxVal = 255;
+    int maxVal;
     int hauteur;
     int largeur;
     vector<vector<int>> contenu;// creer tableau de valeurs ici
